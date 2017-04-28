@@ -17,4 +17,15 @@ attr_reader(:new_word, :id)
   def Word.clear
     @@all_words=[]
   end
+
+  def Word.find(id)
+    found_word = nil
+    @@all_words.each do |word|
+      if word.id().eql?(id)
+        found_word = word
+      end
+    end
+    found_word
+  end
+
 end

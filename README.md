@@ -1,4 +1,5 @@
 |Description|Input|Output|
 |----------|:--------:|:---------|
-|It returns an inputted word|Cubby|Cubby|
-|It adds new word to an all words array|Tubby|[Tubby]|
+|Returns an inputted word|Cubby|Cubby|
+|Adds new word to all words array|Tubby|[Tubby]|
+|Assigns each word a unique id based on all words array length|Nubby|no output, id = 2|
