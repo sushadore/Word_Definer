@@ -2,9 +2,9 @@ class Word
   attr_reader(:new_word, :id)
   @@all_words = []
 
-  def initialize(attributes)
-    @new_word = attributes.fetch(:new_word)
-    @id = @@all_words.length + 1
+  define_method(:initialize) do |attributes|
+     @new_word = attributes.fetch(:new_word)
+     @id = @@all_words.length + 1
   end
 
   def Word.all
@@ -13,10 +13,6 @@ class Word
 
   def save
     @@all_words.push(self)
-  end
-
-  def Word.clear
-    @@all_words=[]
   end
 
   def Word.find(identification)
@@ -31,9 +27,14 @@ class Word
 end
 
 class Definition
-  attr_reader(:definition)
-  
-  def initialize(attributes)
-    @definition = attributes.fetch(:definition)
-  end
+  attr_reader(:new_definition)
+  @@all_definitions = []
+
+    define_method(:initialize) do |attributes|
+      @new_definition = attributes.fetch(:new_definition)
+    end
+
+    def Definition.all
+      @@all_definitions
+    end
 end
