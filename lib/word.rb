@@ -37,4 +37,8 @@ class Definition
     def Definition.all
       @@all_definitions
     end
+
+    def save
+      @@all_definitions.push(self)
+    end
 end
