@@ -27,4 +27,11 @@ describe 'Word' do
       expect(Word.all).to(eq([]))
     end
   end
+  describe '#id' do
+    it 'assigns a unique id to each word' do
+      test_word=Word.new(:new_word => 'Cubby')
+      test_word.save
+      expect(test_word.id).to(eq(1))
+    end
+  end
 end

@@ -1,8 +1,9 @@
 class Word
-attr_reader(:new_word)
+attr_reader(:new_word, :id)
 @@all_words = []
   define_method(:initialize) do |attributes|
     @new_word = attributes.fetch(:new_word)
+    @id = @@all_words.length + 1
   end
 
   def Word.all
