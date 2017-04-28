@@ -12,4 +12,8 @@ attr_reader(:new_word)
   def save
     @@all_words.push(self)
   end
+
+  def Word.clear
+    @@all_words=[]
+  end
 end
