@@ -4,8 +4,8 @@ require 'Word'
 describe 'Definition' do
   describe '#new_definition' do
     it 'returns an inputted definition' do
-      test_word = Definition.new(:new_definition => 'a cozy spot')
-      expect(test_word.new_definition).to(eq('a cozy spot'))
+      test_definition = Definition.new(:new_definition => 'a cozy spot')
+      expect(test_definition.new_definition).to(eq('a cozy spot'))
     end
   end
 
@@ -20,6 +20,14 @@ describe 'Definition' do
       test_definition=Definition.new(:new_definition => 'a cozy spot')
       Definition.all
       expect(test_definition.save).to(eq([test_definition]))
+    end
+  end
+
+  describe '#id' do
+    it 'assigns a unique id to each definition' do
+      test_definition=Definition.new(:new_definition => 'a cozy spot')
+      test_definition.save
+      expect(test_definition.id).to(eq(2))
     end
   end
 end
