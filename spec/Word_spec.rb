@@ -25,9 +25,9 @@ describe 'Word' do
 
   describe '#id' do
     it 'assigns a unique id to each word' do
-      test_word=Word.new(:new_word => 'Cubby')
-      test_word.save
-      expect(test_word.id).to(eq(2))
+      test_word2=Word.new(:new_word => 'Cubby')
+      test_word2.save
+      expect(test_word2.id).to(eq(2))
     end
   end
 
@@ -38,6 +38,13 @@ describe 'Word' do
       test_word2 = Word.new(:new_word => 'Tubby')
       test_word2.save
       expect(Word.find(test_word2.id())).to(eq(test_word2))
+    end
+  end
+  describe('#add_definition') do
+    it ('adds a definition to the word definitions array') do
+      test_word = Word.new(:new_word => 'Cubby')
+      test_definition = Definition.new(:new_definition => 'a cozy spot')
+      expect(test_word.add_definition(test_definition)).to(eq([test_definition]))
     end
   end
 end

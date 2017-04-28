@@ -4,6 +4,7 @@ class Word
 
   define_method(:initialize) do |attributes|
      @new_word = attributes.fetch(:new_word)
+     @definitions = []
      @id = @@all_words.length + 1
   end
 
@@ -23,6 +24,10 @@ class Word
       end
     end
     found_word
+  end
+
+  def add_definition(definition)
+    @definitions.push(definition)
   end
 end
 

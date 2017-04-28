@@ -25,9 +25,9 @@ describe 'Definition' do
 
   describe '#id' do
     it 'assigns a unique id to each definition' do
-      test_definition=Definition.new(:new_definition => 'a cozy spot')
-      test_definition.save
-      expect(test_definition.id).to(eq(2))
+      test_definition2=Definition.new(:new_definition => 'a cozy spot')
+      test_definition2.save
+      expect(test_definition2.id).to(eq(2))
     end
   end
 end
