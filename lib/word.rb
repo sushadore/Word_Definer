@@ -1,7 +1,8 @@
 class Word
-attr_reader(:new_word, :id)
-@@all_words = []
-  define_method(:initialize) do |attributes|
+  attr_reader(:new_word, :id)
+  @@all_words = []
+
+  def initialize(attributes)
     @new_word = attributes.fetch(:new_word)
     @id = @@all_words.length + 1
   end
@@ -18,14 +19,21 @@ attr_reader(:new_word, :id)
     @@all_words=[]
   end
 
-  def Word.find(id)
+  def Word.find(identification)
     found_word = nil
     @@all_words.each do |word|
-      if word.id().eql?(id)
+      if word.id().eql?(identification)
         found_word = word
       end
     end
     found_word
   end
+end
 
+class Definition
+  attr_reader(:definition)
+  
+  def initialize(attributes)
+    @definition = attributes.fetch(:definition)
+  end
 end
