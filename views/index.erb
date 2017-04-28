@@ -1,0 +1,10 @@
+<h1>Funny Words!</h1>
+<h3>Your list of funny words:</h3>
+<ul>
+  <% @words.each() do |word| %>
+    <li><a href="word_definitions<%= word.new_word() %>"><%= word.new_word() %></a></li>
+  <% end %>
+</ul>
+<p>Click on a word to see what it means!</p>
+
+<a href="/word/new">Add word</a>
