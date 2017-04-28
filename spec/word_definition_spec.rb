@@ -15,11 +15,11 @@ describe 'Definition' do
     end
   end
 
-  # describe '#save' do
-  #   it 'adds a definition to definition array' do
-  #     test_definition=Definition.new(:new_word => 'Cubby')
-  #     Word.all
-  #     expect(test_word.save).to(eq([test_word]))
-  #   end
-  # end
+  describe '#save' do
+    it 'adds a definition to definition array' do
+      test_definition=Definition.new(:new_word => 'Cubby')
+      Word.all
+      expect(test_word.save).to(eq([test_word]))
+    end
+  end
 end
