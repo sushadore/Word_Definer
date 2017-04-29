@@ -1,0 +1,9 @@
+</h1> <%= @word.new_word() %> has been added to your list of words! Time to add a definition!</h1>
+<form action="definitions" method="post">
+<input name="word_id" type="hidden" value="<%= @word.id %>">
+<label for="definition">Definition</label>
+<input name="definition" type="text">
+<button type="submit">Add my definition!</button>
+</form>
+
+<a href="/">Word list</a>

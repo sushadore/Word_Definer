@@ -15,5 +15,17 @@ end
 post '/new_word' do
   @word = Word.new(:new_word => params.fetch('word'))
   @word.save
-  erb :word_displayed
+  erb :definition_form
+end
+
+post '/definitions' do
+  @definition = Definition.new(:new_definition => params.fetch('definition'))
+  @definition.save
+  @word = Word.find(params.fetch('word_id').to_i)
+  erb :word_details
+end
+
+get '/word_details' do
+  @definitions = Definition.all
+  erb :word_details
 end
