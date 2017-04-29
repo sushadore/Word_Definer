@@ -1,6 +1,4 @@
-</h1>Your new word is:</h1>
-<%= @word.new_word() %>
+</h1> <%= @word.new_word() %> has been added to your list of words!</h1>
 
-<a href="/">See all words</a>
-<br>
-<p><a href="/definition:id/word/new">Add a definition</a> to my word!</p>
+<a href="/">List of words</a>
+<p><a href="/">Add a definition</a> to <%= @word.new_word() %> </p>
