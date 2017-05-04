@@ -5,6 +5,7 @@ require './lib/word'
 also_reload 'lib/**/*.rb'
 
 get '/' do
+  @words = Word.all
   erb :index
 end
 
@@ -18,16 +19,11 @@ get '/words' do
 end
 
 post '/words' do
-  @word = Word.new({:new_word => params.fetch('word')})
+  @word = Word.new(:new_word => params.fetch('word'))
   @word.save
   @words = Word.all
   erb :word_definitions_form
 end
-
-# get '/vehicles/:id' do
-#   @vehicle = Vehicle.find(params.fetch('id').to_i)
-#   erb :vehicle
-# end
 
 get '/words/:id' do
   @word = Word.find(params.fetch('id').to_i)
@@ -40,9 +36,9 @@ get '/words/:id/definitions/new' do
 end
 
 post '/definitions' do
-  @definition = Definition.new({:new_definition => params.fetch('definition')})
+  @definition = Definition.new(:new_definition => params.fetch('definition'))
   @definition.save
-  @word = Word.find(params.fetch('word_id').to_i())
+  @word = Word.find(params.fetch('word_id').to_i)
   @word.add_definition(@definition)
   erb :word
 end
