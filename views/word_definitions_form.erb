@@ -1,4 +1,4 @@
-</h1> <%= @word.new_word() %> has been added to your list of words! Time to add a definition!</h1>
+<!-- </h1> <%= @word.new_word() %> has been added to your list of words! Time to add a definition!</h1>
 <form action="definitions" method="post">
 <input name="word_id" type="hidden" value="<%= @word.id %>">
 <label for="definition">Definition</label>
@@ -6,4 +6,17 @@
 <button type="submit">Add my definition!</button>
 </form>
 
-<a href="/">Word list</a>
+<a href="/">Word list</a> -->
+
+<h1>Add a definition to <%= @word.new_word %> </h1>
+
+<form action="/definitions" method="post">
+  <input name='word_id' type='hidden' value='<%= @word.id %>'>
+
+  <label for='definition'>Definition</label>
+  <input name='definition' type='text'>
+
+  <button type="submit">Definition</button>
+</form>
+
+<a href="/">Home</a>
