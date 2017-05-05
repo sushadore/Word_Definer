@@ -19,7 +19,7 @@ class Word
   def Word.find(identification)
     found_word = nil
     @@all_words.each do |word|
-      if word.id().eql?(identification)
+      if word.id.eql?(identification)
         found_word = word
       end
     end
@@ -28,27 +28,5 @@ class Word
 
   def add_definition(definition)
     @definitions.push(definition)
-  end
-end
-
-class Definition
-  attr_reader(:new_definition)
-  @@all_definitions = []
-
-  def initialize(attributes)
-    @new_definition = attributes.fetch(:new_definition)
-    @id = @@all_definitions.length + 1
-  end
-
-  def Definition.all
-    @@all_definitions
-  end
-
-  def save
-    @@all_definitions.push(self)
-  end
-
-  def id
-    @id
   end
 end

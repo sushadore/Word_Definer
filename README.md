@@ -12,8 +12,8 @@ This program stores words and allows user to input multiple definitions.
 |Returns an inputted word|Cubby|Cubby|
 |Adds new word to all words array|Tubby|[Tubby]|
 |Assigns each word a unique id based on all words array length|Nubby|no output, id = 2|
-|Returns a word based on its id for use in the router|N/A|N/A\|
-|Accepts a definitions|a cozy spot| Cubby defined as a cozy spot|
+|Returns a word based on its id for use in the router|N/A|N/A|
+|Accepts definitions|a cozy spot| Cubby defined as a cozy spot|
 |Displays multiple definitions for a word| a cozy spot, a little cubicle | Cozy definitions: a cozy spot & a little cubicle|
 
 ## Setup
@@ -22,10 +22,6 @@ This program stores words and allows user to input multiple definitions.
 * In the terminal run the command: git clone https://github.com/sushadore/anagrams
 * Switch to the anagrams folder and run the command: ruby app.rb
 * View the site at http://localhost:4567/ -->
-
-## Known Bugs
-
-Page does not return definitions.
 
 ## License
 MIT license

@@ -13,5 +13,4 @@ class Definition
   def save
     @@all_definitions.push(self)
   end
-
 end

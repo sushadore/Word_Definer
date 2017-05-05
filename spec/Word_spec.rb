@@ -1,5 +1,5 @@
 require 'rspec'
-require 'Word'
+require 'word'
 
 describe 'Word' do
   describe '#new_word' do
@@ -40,6 +40,7 @@ describe 'Word' do
       expect(Word.find(test_word2.id())).to(eq(test_word2))
     end
   end
+
   describe('#add_definition') do
     it ('adds a definition to the word definitions array') do
       test_word = Word.new(:new_word => 'Cubby')
