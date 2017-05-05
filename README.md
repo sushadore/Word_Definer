@@ -18,10 +18,7 @@ This program stores words and allows user to input multiple definitions.
 
 ## Setup
 
-<!-- This site requires a machine with Ruby installed. View the repository at https://github.com/sushadore/anagrams. This is a static site but follow these steps for a browser preview:
-* In the terminal run the command: git clone https://github.com/sushadore/anagrams
-* Switch to the anagrams folder and run the command: ruby app.rb
-* View the site at http://localhost:4567/ -->
+Follow this link: https://immense-lake-57030.herokuapp.com/
 
 ## License
 MIT license
